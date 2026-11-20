@@ -20,3 +20,10 @@ En el celular aparecen botones en pantalla.
 - `index.html`: versión actual (v3), con retratos manga en los diálogos y un cuadro de diálogo compacto que sube cuando el personaje está abajo.
 - `img/`: fondos de los escenarios.
 - `versiones/`: versiones anteriores (v1 original y v2).
+
+## Biblioteca de libros
+
+- `libros/index.html`: Biblioteca de Libros de la saga (portadas, fichas y enlaces).
+- `libros/sastre-de-grid-libro-1.html`: Libro I · Infierno, edición hojeable ilustrada.
+
+Enlaces: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/
