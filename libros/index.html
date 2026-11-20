@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Biblioteca de Libros · Miguel Agip</title>
-<meta name="description" content="Novelas y sagas de Miguel Agip: El Sastre de Grid y sus secuelas.">
-<meta property="og:title" content="Biblioteca de Libros · Miguel Agip">
+<title>Biblioteca de Libros · Neptalí Agip</title>
+<meta name="description" content="Novelas y sagas de Neptalí Agip: El Sastre de Grid y sus secuelas.">
+<meta property="og:title" content="Biblioteca de Libros · Neptalí Agip">
 <meta property="og:description" content="El Sastre de Grid y las próximas entregas de la saga. Léelos en línea.">
 <style>
 :root{--bg:#0d1412;--panel:#14201c;--line:#26382f;--ink:#f3efe4;--mute:#a9b5ab;--green:#3ddc84;--green2:#a8f0c6;--paper:#e9e1cc;--radius:14px}
@@ -85,8 +85,8 @@ footer b{color:var(--ink)}
     <h1>Biblioteca de <em>Libros</em></h1>
     <p class="lead">Historias de fantasía nacidas en Lima. Aquí vive la saga de <i>El Sastre de Grid</i> y todas las entregas que vienen.</p>
     <div class="author">
-      <div class="seal">MA</div>
-      <div class="ui"><b>Escrito por Miguel Agip</b><span>Lima, Perú</span></div>
+      <div class="seal">NA</div>
+      <div class="ui"><b>Escrito por Neptalí Agip</b><span>Lima, Perú</span></div>
     </div>
     <div class="promise">
       <div><strong>📚 La saga continúa</strong>Nuevos libros y secuelas se suman a la biblioteca.</div>
@@ -110,9 +110,9 @@ footer b{color:var(--ink)}
 
 <footer>
   <div class="wrap">
-    <b>Biblioteca de Libros · una creación de Miguel Agip</b><br>
+    <b>Biblioteca de Libros · una creación de Neptalí Agip</b><br>
     Todos los derechos reservados sobre los textos e ilustraciones.<br>
-    © <span id="yr"></span> Miguel Agip · neptaliagiphoyos@gmail.com
+    © <span id="yr"></span> Neptalí Agip · neptaliagiphoyos@gmail.com
   </div>
 </footer>
 
@@ -150,7 +150,7 @@ function render(){
       <div class="jacket ${b.f ? "" : "soon"}" style="--c1:${b.c[0]};--c2:${b.c[1]}">
         <span class="vol">${b.vol}</span>
         <h3>${b.t}<i>${b.sub}</i></h3>
-        <span class="by">Miguel Agip</span>
+        <span class="by">Neptalí Agip</span>
       </div>
       <div class="meta">
         <p>${b.d}</p>
@@ -165,7 +165,7 @@ render();
 Promise.all(BOOKS.filter(b => b.f).map(b => fetch(b.f, {method:"HEAD", cache:"no-store"}).then(r => { if (r.ok) ready.add(b.f); }).catch(() => {})))
   .then(render);
 
-const msg = encodeURIComponent("Hola Miguel, le escribo desde la Biblioteca de Libros: ");
+const msg = encodeURIComponent("Hola Neptalí, le escribo desde la Biblioteca de Libros: ");
 $("#wa").href = "https://wa.me/51975525627?text=" + msg;
 $("#mail").href = "mailto:neptaliagiphoyos@gmail.com?subject=" + encodeURIComponent("Comentario – El Sastre de Grid") + "&body=" + msg;
 const sheet = $("#sheet");
