@@ -1277,7 +1277,7 @@ function renderTitle(t, dt) {
    ===================================================================== */
 async function titleScreen() {
   MODE = 'title'; $('title').hidden = false; $('end').hidden = true; $('over').hidden = true; setSong(null);
-  $('titleHint').textContent = 'Un RPG de 16 bits basado en la novela de Miguel Agip';
+  $('titleHint').textContent = 'Un RPG de 16 bits basado en la novela de Neptalí Agip';
   const opts = [{ label: 'Nueva partida' }, { label: 'Continuar', disabled: !hasSave() }];
   const k = await listMenu($('titleMenu'), opts, { cancel: false });
   ensureAudio(); if (!musicOn) setMusicOn(true);

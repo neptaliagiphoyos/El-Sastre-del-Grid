@@ -1,6 +1,6 @@
 # El Sastre de Grid — RPG
 
-Videojuego de rol de 16 bits basado en *El Sastre de Grid*, Libro I de las **Crónicas de la Lima Despierta**, de Miguel Agip.
+Videojuego de rol de 16 bits basado en *El Sastre de Grid*, Libro I de las **Crónicas de la Lima Despierta**, de Neptalí Agip.
 
 Lima, 2055. Segunda noche del apagón. Damián Huerta, «el Sastre», recorre Barrios Altos, el Mercado de las Sombras y Barranco junto al fantasma de su hermano Julián.
 
