@@ -30,7 +30,7 @@ Enlaces: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/
 
 ## Juego de plataformas 3D
 
-- `juegos/la-noche-de-los-techos.html`: «Damián: la noche de los techos» v1, para celular y computadora.
+- `juegos/la-noche-de-los-techos.html`: «Damián: la noche de los techos» v2 (con el final que adelanta el Libro II), para celular y computadora.
 
 Enlace: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/juegos/la-noche-de-los-techos.html
 
