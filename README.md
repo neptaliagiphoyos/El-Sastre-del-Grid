@@ -27,3 +27,9 @@ En el celular aparecen botones en pantalla.
 - `libros/sastre-de-grid-libro-1.html`: Libro I · Infierno, edición hojeable ilustrada.
 
 Enlaces: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/
+
+## Juego de plataformas 3D
+
+- `juegos/la-noche-de-los-techos.html`: «Damián: la noche de los techos» v1, para celular y computadora.
+
+Enlace: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/juegos/la-noche-de-los-techos.html
