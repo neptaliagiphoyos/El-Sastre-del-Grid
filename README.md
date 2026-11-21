@@ -33,3 +33,9 @@ Enlaces: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/
 - `juegos/la-noche-de-los-techos.html`: «Damián: la noche de los techos» v1, para celular y computadora.
 
 Enlace: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/juegos/la-noche-de-los-techos.html
+
+## Resumen narrado
+
+- `libros/audio/resumen-10-min.mp3`: el Libro I contado en 10 minutos (voz «Alex mayor suave»).
+
+Enlace: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/audio/resumen-10-min.mp3
