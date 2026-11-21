@@ -99,6 +99,14 @@ footer b{color:var(--ink)}
 <main class="wrap">
   <h2 class="saga">Saga <i>El Sastre de Grid</i></h2>
   <p class="saga-sub">Lima, año 2055. Una inteligencia artificial llamada Grid lo controla casi todo, y un antihéroe improbable decide enfrentarla.</p>
+  <div class="ui" id="leer-libro-1" style="margin:0 0 22px;padding:16px;border:1px solid rgba(61,220,132,.45);border-radius:var(--radius);background:rgba(61,220,132,.08)">
+    <a class="btn primary" href="https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/sastre-de-grid-libro-1.html" target="_blank" rel="noopener">📖 Leer el Libro I · El Sastre de Grid</a>
+    <p style="margin:12px 0 6px;color:var(--mute);font-size:13px">Enlace directo para compartir:</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <a href="https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/sastre-de-grid-libro-1.html" style="color:var(--green2);word-break:break-all;font-size:14px">https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/sastre-de-grid-libro-1.html</a>
+      <button class="btn" type="button" id="copiar-libro-1">📋 Copiar enlace</button>
+    </div>
+  </div>
   <div class="grid" id="grid"></div>
   <p class="saga-sub" style="margin-top:22px">🎮 ¿Prefieres jugarla? Entra a la historia con el <a href="https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/" style="color:var(--green)">videojuego de rol El Sastre de Grid</a>.</p>
 
@@ -182,6 +190,11 @@ Promise.all(BOOKS.filter(b => b.f).map(b => fetch(b.f, {method:"HEAD", cache:"no
 
 const msg = encodeURIComponent("Hola Neptalí, le escribo desde la Biblioteca de Libros: ");
 $("#mail").href = "mailto:neptaliagiphoyos@gmail.com?subject=" + encodeURIComponent("Comentario – El Sastre de Grid") + "&body=" + msg;
+$("#copiar-libro-1").addEventListener("click", e => {
+  const url = "https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/sastre-de-grid-libro-1.html";
+  const done = () => { e.target.textContent = "✅ Copiado"; setTimeout(() => e.target.textContent = "📋 Copiar enlace", 2000); };
+  (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(done).catch(() => window.prompt("Copia el enlace:", url));
+});
 const sheet = $("#sheet");
 document.addEventListener("click", e => {
   if (e.target.closest("[data-feedback]")) { e.preventDefault(); sheet.classList.add("open"); }
