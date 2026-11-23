@@ -34,8 +34,3 @@ Enlaces: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/
 
 Enlace: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/juegos/la-noche-de-los-techos.html
 
-## Resumen narrado
-
-- `libros/audio/resumen-10-min.mp3`: el Libro I contado en 10 minutos (voz «Alex mayor suave»).
-
-Enlace: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/audio/resumen-10-min.mp3
