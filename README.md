@@ -24,7 +24,7 @@ En el celular aparecen botones en pantalla.
 ## Biblioteca de libros
 
 - `libros/index.html`: Biblioteca de Libros de la saga (portadas, fichas y enlaces).
-- `libros/sastre-de-grid-libro-1.html`: Libro I · Infierno, edición hojeable ilustrada.
+- `libros/sastre-de-grid-libro-1.html`: Libro I · Infierno, adelanto hojeable con los capítulos 1 a 5 (la novela completa sale a la venta el 24 de diciembre de 2026).
 
 Enlaces: https://neptaliagiphoyos.github.io/El-Sastre-del-Grid/libros/
 
