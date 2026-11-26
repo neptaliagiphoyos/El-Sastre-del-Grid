@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionario lectores beta</title>
+<style>
+:root{--bg:#f6f1e7;--card:#fffdf8;--ink:#1f1a14;--muted:#6b6155;--line:#e2d8c6;--acc:#b5651d;--acc2:#7a3e0e;--sel:#f3e2cc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15120e;--card:#1f1b16;--ink:#efe7da;--muted:#a89b8a;--line:#3a3229;--acc:#e09a52;--acc2:#f0b878;--sel:#3a2a1a}}
+:root[data-theme="dark"]{--bg:#15120e;--card:#1f1b16;--ink:#efe7da;--muted:#a89b8a;--line:#3a3229;--acc:#e09a52;--acc2:#f0b878;--sel:#3a2a1a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 Georgia,"Times New Roman",serif}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 60px}
+header{text-align:center;padding:12px 0 8px}
+header small{letter-spacing:.18em;text-transform:uppercase;color:var(--acc);font:600 12px/1 system-ui,sans-serif}
+h1{font-size:28px;margin:8px 0 4px}
+.sub{color:var(--muted);margin:0 0 6px}
+.intro{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:14px 0}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.q h2{font-size:18px;margin:0 0 4px}
+.q h2 span{color:var(--acc);font-family:system-ui,sans-serif;font-size:14px;margin-right:6px}
+.hint{color:var(--muted);font-size:14px;margin:0 0 10px;font-family:system-ui,sans-serif}
+textarea,input[type=text]{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:16px/1.4 system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+textarea{min-height:84px;resize:vertical}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{cursor:pointer}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:15px/1.2 system-ui,sans-serif;background:var(--bg)}
+.opts input:checked+span{background:var(--sel);border-color:var(--acc);color:var(--acc2);font-weight:600}
+.opts input:focus-visible+span{outline:2px solid var(--acc);outline-offset:2px}
+.scale span{min-width:46px;text-align:center}
+.mt{margin-top:10px}
+.send{position:sticky;bottom:0;background:var(--bg);padding:12px 0 4px;border-top:1px solid var(--line);margin-top:18px}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+button{border:0;border-radius:12px;padding:14px;font:600 16px/1 system-ui,sans-serif;cursor:pointer}
+.wa{background:#1f8f4e;color:#fff}.mail{background:var(--acc);color:#fff}
+.copy{grid-column:1/-1;background:transparent;border:1px solid var(--line);color:var(--ink)}
+#ok{text-align:center;color:var(--muted);font:14px system-ui,sans-serif;min-height:20px;margin:6px 0 0}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:24px;font-family:system-ui,sans-serif}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <small>Lectores beta · Ronda 2</small>
+  <h1>El Sastre de Grid</h1>
+  <p class="sub">Libro I · Neptalí Agip</p>
+</header>
+
+<div class="intro">
+  Gracias por leer. Son unos <b>5 minutos</b>. Responde lo que quieras: ninguna pregunta es obligatoria y no hace falta escribir bonito. Lo que más me sirve es la verdad.
+  <br><br>Si puedes, envíalo hasta el <b>domingo 6 de diciembre</b>. Al final, tocas «Enviar por WhatsApp» o «Enviar por correo».
+</div>
+
+<form id="f" autocomplete="on">
+<div class="q"><h2><span>1</span>¿Cómo te llamas?</h2>
+  <input type="text" name="nombre" placeholder="Tu nombre o como quieras firmar"></div>
+
+<div class="q"><h2><span>2</span>¿Cómo lo leíste y hasta dónde llegaste?</h2>
+  <div class="opts" data-name="formato">
+    <label><input type="radio" name="formato" value="PDF"><span>PDF</span></label>
+    <label><input type="radio" name="formato" value="Audiolibro"><span>Audiolibro</span></label>
+    <label><input type="radio" name="formato" value="Las dos"><span>Las dos</span></label>
+  </div>
+  <div class="opts mt">
+    <label><input type="radio" name="avance" value="Lo terminé"><span>Lo terminé</span></label>
+    <label><input type="radio" name="avance" value="Lo dejé a medias"><span>Lo dejé a medias</span></label>
+  </div>
+  <input class="mt" type="text" name="capitulo" placeholder="Si lo dejaste: ¿en qué capítulo, más o menos?"></div>
+
+<div class="q"><h2><span>3</span>¿Qué tanto te atrapó?</h2>
+  <p class="hint">1 = me costó seguir · 5 = no podía soltarlo</p>
+  <div class="opts scale">
+    <label><input type="radio" name="atrapo" value="1"><span>1</span></label>
+    <label><input type="radio" name="atrapo" value="2"><span>2</span></label>
+    <label><input type="radio" name="atrapo" value="3"><span>3</span></label>
+    <label><input type="radio" name="atrapo" value="4"><span>4</span></label>
+    <label><input type="radio" name="atrapo" value="5"><span>5</span></label>
+  </div></div>
+
+<div class="q"><h2><span>4</span>¿En qué parte te aburriste o pensaste dejarlo?</h2>
+  <p class="hint">El capítulo o la escena, aunque sea aproximado.</p>
+  <textarea name="aburri"></textarea></div>
+
+<div class="q"><h2><span>5</span>¿Hubo algo que no entendiste?</h2>
+  <p class="hint">Un personaje, cómo funciona el Grid, un salto de tiempo, una palabra…</p>
+  <textarea name="noentendi"></textarea></div>
+
+<div class="q"><h2><span>6</span>¿Qué personaje recuerdas más?</h2>
+  <div class="opts">
+    <label><input type="checkbox" name="personaje" value="Julián"><span>Julián</span></label>
+    <label><input type="checkbox" name="personaje" value="Ximena"><span>Ximena</span></label>
+    <label><input type="checkbox" name="personaje" value="Damián"><span>Damián</span></label>
+    <label><input type="checkbox" name="personaje" value="Valeria"><span>Valeria</span></label>
+    <label><input type="checkbox" name="personaje" value="Benavides"><span>Benavides</span></label>
+  </div>
+  <input class="mt" type="text" name="personaje_porque" placeholder="Otro, o ¿por qué ese?"></div>
+
+<div class="q"><h2><span>7</span>¿Qué esperabas que pasara?</h2>
+  <p class="hint">Algo que esperabas y no pasó, o algo que te sorprendió.</p>
+  <textarea name="esperaba"></textarea></div>
+
+<div class="q"><h2><span>8</span>¿Te sonó a Lima de verdad?</h2>
+  <p class="hint">Calles, distritos, combis, comida, la forma de hablar.</p>
+  <div class="opts">
+    <label><input type="radio" name="lima" value="Sí, totalmente"><span>Sí, totalmente</span></label>
+    <label><input type="radio" name="lima" value="En general sí"><span>En general sí</span></label>
+    <label><input type="radio" name="lima" value="Varias cosas no"><span>Varias cosas no</span></label>
+  </div>
+  <textarea class="mt" name="lima_detalle" placeholder="¿Qué lugar, dato o frase no te cuadró?"></textarea></div>
+
+<div class="q"><h2><span>9</span>¿Te sentiste dentro de la historia?</h2>
+  <input type="text" name="dentro" placeholder="Un momento en que sentiste que estabas ahí">
+  <input class="mt" type="text" name="fuera" placeholder="Un momento que te sacó de la historia"></div>
+
+<div class="q"><h2><span>10</span>¿Se lo recomendarías a alguien?</h2>
+  <div class="opts">
+    <label><input type="radio" name="recomienda" value="Sí"><span>Sí</span></label>
+    <label><input type="radio" name="recomienda" value="Tal vez"><span>Tal vez</span></label>
+    <label><input type="radio" name="recomienda" value="No"><span>No</span></label>
+  </div>
+  <input class="mt" type="text" name="recomienda_quien" placeholder="¿A quién? (un amigo, tu hijo, alguien que lee ciencia ficción…)"></div>
+
+<div class="q"><h2><span>11</span>¿Puedo citar tu opinión cuando salga el libro?</h2>
+  <p class="hint">Solo con tu permiso. Si quieres, escribe una frase corta sobre el libro.</p>
+  <div class="opts">
+    <label><input type="radio" name="cita" value="Sí, con mi nombre"><span>Sí, con mi nombre</span></label>
+    <label><input type="radio" name="cita" value="Sí, con iniciales"><span>Con iniciales</span></label>
+    <label><input type="radio" name="cita" value="No"><span>Prefiero que no</span></label>
+  </div>
+  <input class="mt" type="text" name="frase" placeholder="Tu frase (opcional)"></div>
+
+<div class="q"><h2><span>+</span>Erratas o algo más (opcional)</h2>
+  <textarea name="extra" placeholder="Una palabra mal escrita, una página, lo que quieras contarme"></textarea></div>
+</form>
+
+<div class="send">
+  <div class="btns">
+    <button class="wa" id="bwa" type="button">Enviar por WhatsApp</button>
+    <button class="mail" id="bmail" type="button">Enviar por correo</button>
+    <button class="copy" id="bcopy" type="button">Copiar respuestas</button>
+  </div>
+  <p id="ok"></p>
+</div>
+
+<footer>Tus respuestas no se guardan en ningún servidor: solo salen cuando tú las envías.<br>Gracias por ayudarme con este libro. Miguel</footer>
+</div>
+
+<script>
+// Datos de Miguel: si se completan, los botones van directo a él.
+const WHATSAPP = "";   // ej. "51999999999" (código de país sin +)
+const CORREO   = "";   // ej. "nombre@correo.com"
+
+const f = document.getElementById('f');
+const KEY = 'beta-r2-v1';
+const labels = {
+  nombre:'Nombre', formato:'Formato', avance:'Avance', capitulo:'Capítulo donde lo dejé',
+  atrapo:'Qué tanto me atrapó (1-5)', aburri:'Dónde me aburrí', noentendi:'Qué no entendí',
+  personaje:'Personaje que más recuerdo', personaje_porque:'Otro / por qué',
+  esperaba:'Qué esperaba que pasara', lima:'¿Suena a Lima?', lima_detalle:'Lo que no me cuadró de Lima',
+  dentro:'Momento en que me sentí dentro', fuera:'Momento que me sacó',
+  recomienda:'¿Lo recomendaría?', recomienda_quien:'A quién', cita:'Permiso para citar',
+  frase:'Mi frase', extra:'Erratas / otros'
+};
+function data(){
+  const o = {};
+  for (const el of f.elements){
+    if(!el.name) continue;
+    if((el.type==='radio'||el.type==='checkbox') && !el.checked) continue;
+    const v = el.value.trim(); if(!v) continue;
+    o[el.name] = o[el.name] ? o[el.name]+', '+v : v;
+  }
+  return o;
+}
+function texto(){
+  const d = data();
+  let t = '*El Sastre de Grid · Lectores beta, ronda 2 (v4.11)*\n';
+  for(const k in labels){ if(d[k]) t += '\n*'+labels[k]+':* '+d[k]; }
+  return t;
+}
+function vacio(){ return Object.keys(data()).length===0; }
+function msg(s){ document.getElementById('ok').textContent = s; }
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify([...new FormData(f)])); }catch(e){} }
+function load(){
+  try{
+    const a = JSON.parse(localStorage.getItem(KEY)||'[]');
+    for(const [k,v] of a){
+      const els = f.querySelectorAll('[name="'+k+'"]');
+      els.forEach(el=>{ if(el.type==='radio'||el.type==='checkbox'){ if(el.value===v) el.checked=true; } else el.value=v; });
+    }
+  }catch(e){}
+}
+f.addEventListener('input', save); f.addEventListener('change', save); load();
+
+document.getElementById('bwa').onclick = ()=>{
+  if(vacio()) return msg('Responde al menos una pregunta.');
+  location.href = 'https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(texto());
+};
+document.getElementById('bmail').onclick = ()=>{
+  if(vacio()) return msg('Responde al menos una pregunta.');
+  const body = texto().replace(/\*/g,'');
+  location.href = 'mailto:'+CORREO+'?subject='+encodeURIComponent('El Sastre de Grid · respuestas lector beta')+'&body='+encodeURIComponent(body);
+};
+document.getElementById('bcopy').onclick = async ()=>{
+  if(vacio()) return msg('Responde al menos una pregunta.');
+  try{ await navigator.clipboard.writeText(texto()); msg('Copiado. Pégalo en WhatsApp o en un correo para Miguel.'); }
+  catch(e){ msg('No se pudo copiar automáticamente.'); }
+};
+</script>
+</body>
+</html>
